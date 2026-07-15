@@ -36,6 +36,19 @@
     p, li { color: var(--dim); }
     strong { color: var(--ink); }
     a { color: var(--accent); }
+    .contact-link {
+      display: inline-block;
+      margin: 4px 0 8px;
+      padding: 10px 14px;
+      border: 1px solid var(--accent);
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .contact-link:hover,
+    .contact-link:focus-visible {
+      background: var(--accent);
+      color: var(--page);
+    }
     .summary {
       margin: 24px 0;
       padding: 16px 18px;
@@ -71,7 +84,7 @@
     <p>When scanning an image tab or a full-resolution image already referenced by the current page, the extension may request that image directly from its existing source URL. The request goes to the website hosting that resource and is used only to complete the scan initiated by you. Scanned content and decoded results are not sent to the developer.</p>
 
     <h2>Sharing and selling</h2>
-    <p>Just QR Me does not sell user data. It does not share user data with advertisers, data brokers, analytics providers, or other third parties. User data is not used for advertising, creditworthiness, lending, or any purpose unrelated to QR scanning.</p>
+    <p>Just QR Me does not sell user data. The extension does not share user data with advertisers, data brokers, analytics providers, or other third parties. User data is not used for advertising, creditworthiness, lending, or any purpose unrelated to QR scanning. Information voluntarily submitted through the separate support form is handled as described in the Contact section below.</p>
 
     <h2>Clipboard access</h2>
     <p>Successful scan results may be written to your clipboard. The extension handles an image from the clipboard only when you intentionally paste that image into the extension.</p>
@@ -89,7 +102,10 @@
     <p>If the extension's data practices change, this policy and the Chrome Web Store disclosures will be updated before the new practices are introduced.</p>
 
     <h2>Contact</h2>
-    <p>Questions about this policy can be submitted through the <a href="https://github.com/theverycob/just-qr-me-privacy/issues">public privacy repository's Issues page</a>.</p>
+    <p>Questions, bug reports, and feedback can be submitted through the Just QR Me Support form:</p>
+    <p><a class="contact-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeJ15zHnuvfHqbMSW88E9lgsPGvoaSfUGJp_aLOERW1BOtCUw/viewform?usp=publish-editor">Submit a support question</a></p>
+    <p>You may submit the form without providing your name or email address. If you voluntarily provide an email address, it will be used only to reply to your submission. It will not be used for marketing or shared with advertisers or data brokers.</p>
+    <p>The support form is hosted by Google Forms. Information submitted through the form is delivered to the developer and is also processed by Google under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. Support submissions are retained only as reasonably needed to respond to and manage support requests. Please do not include sensitive personal information.</p>
 
     <footer>
       <a href="https://github.com/theverycob">Developer on GitHub</a>
