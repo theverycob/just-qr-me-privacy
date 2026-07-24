@@ -63,9 +63,9 @@
 <body>
   <main>
     <h1>Privacy Policy</h1>
-    <p class="meta"><strong>Just QR Me - QR Scanner &amp; Generator</strong><br>Effective July 18, 2026</p>
+    <p class="meta"><strong>Just QR Me - QR Scanner &amp; Generator</strong><br>Effective July 24, 2026</p>
 
-    <p class="summary">QR scanning, current-link QR generation, printing, and History processing happen locally on your device. Just QR Me does not send scanned content, the current tab URL, decoded or generated QR values, History, or settings to the developer or to a developer-controlled server.</p>
+    <p class="summary">QR scanning, current-link QR generation, History processing, CSV export, QR file downloads, and printing happen locally on your device. Just QR Me does not send scanned content, the current tab URL, decoded or generated QR values, History, or settings to the developer or to a developer-controlled server.</p>
 
     <h2>Information the extension handles</h2>
     <p>Just QR Me handles only the information needed to scan or generate QR codes and provide its user-facing features:</p>
@@ -78,10 +78,11 @@
     </ul>
 
     <h2>How information is used</h2>
-    <p>The extension uses this information only to find and decode QR codes, generate a QR for the current link you select, copy results to your clipboard, open links you select, display recent History, rebuild and print a QR from a result you select, and remember your accessibility preferences.</p>
+    <p>The extension uses this information only to find and decode QR codes, generate a QR for the current link you select, copy results to your clipboard, open links you select, display recent History, export History items to CSV, download QR files as PNG or SVG, rebuild and print a QR from a result you select, and remember your accessibility preferences.</p>
 
     <h2>Local processing and storage</h2>
-    <p>QR decoding, current-link QR generation, and QR rebuilding occur inside the extension on your device. The Link action reads the active tab URL only after you choose Link and does not contact that website, the developer, or a third-party server to generate the QR. The generated result is stored in local History, which you can clear at any time.</p>
+    <p>QR decoding, current-link QR generation, QR rebuilding, CSV export, and PNG or SVG creation occur inside the extension on your device. The Link action reads the active tab URL only after you choose Link and does not contact that website, the developer, or a third-party server to generate the QR. The generated result is stored in local History, which you can clear at any time.</p>
+    <p>CSV, PNG, and SVG files are created only after you choose a download action. The extension passes the resulting file to Chrome's download system and does not upload it or retain an additional cloud copy.</p>
     <p>Up to 50 recent decoded or generated results and their thumbnails are stored with <code>chrome.storage.local</code>. When you choose to print a History item, the selected value is temporarily passed to the extension's print page with <code>chrome.storage.session</code>. The extension does not use an account, cloud sync, analytics, telemetry, or a remote database.</p>
     <p>When scanning an image tab or a full-resolution image already referenced by the current page, the extension may request that image directly from its existing source URL. The request goes to the website hosting that resource and is used only to complete the scan initiated by you. Scanned content and decoded results are not sent to the developer.</p>
 
@@ -92,13 +93,13 @@
     <p>Decoded or locally generated QR content may be written to your clipboard when you choose Copy. The extension handles an image from the clipboard only when you intentionally paste that image into the extension.</p>
 
     <h2>Deleting your data</h2>
-    <p>Select <strong>Clear</strong> in the History view to remove saved decoded and generated results. Removing the extension also removes its extension-local storage from Chrome.</p>
+    <p>Select <strong>Clear</strong> in the History view to remove saved decoded and generated results. Removing the extension also removes its extension-local storage from Chrome. Files you intentionally downloaded remain in your chosen download location until you delete them.</p>
 
     <h2>External links</h2>
     <p>The extension can open a decoded or locally generated link at your request. It also includes an optional Buy Me a Coffee link. Once you open an external website, that website's privacy policy and practices apply. Just QR Me does not receive payment or financial information from Buy Me a Coffee.</p>
 
     <h2>Chrome Web Store Limited Use</h2>
-    <p>Just QR Me's use of information obtained through Chrome permissions complies with the Chrome Web Store User Data Policy, including the Limited Use requirements. Information is used only to provide or improve the extension's single-purpose, user-facing QR scanning, QR generation, History, and printing features.</p>
+    <p>Just QR Me's use of information obtained through Chrome permissions complies with the Chrome Web Store User Data Policy, including the Limited Use requirements. Information is used only to provide or improve the extension's single-purpose, user-facing QR scanning, QR generation, History, export, download, and printing features.</p>
 
     <h2>Changes to this policy</h2>
     <p>If the extension's data practices change, this policy and the Chrome Web Store disclosures will be updated before the new practices are introduced.</p>
