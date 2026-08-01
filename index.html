@@ -63,55 +63,76 @@
 <body>
   <main>
     <h1>Privacy Policy</h1>
-    <p class="meta"><strong>Just QR Me - QR Scanner &amp; Generator</strong><br>Effective July 26, 2026</p>
+    <p class="meta"><strong>Just QR Me - QR Scanner &amp; Generator</strong><br>Effective August 1, 2026</p>
 
-    <p class="summary">QR scanning, decoding, QR Studio generation and design checks, History processing, CSV export, downloads, and printing happen locally on your device. Just QR Me does not send scanned content, QR Studio fields, selected logos, decoded or generated QR values, History, or settings to the developer or to a developer-controlled server.</p>
+    <p class="summary">QR scanning, QR Studio generation and styling, History, CSV export, QR downloads, and printing are processed locally on your device. Just QR Me does not send scanned content, current-tab URLs, QR Studio fields, selected logos, decoded or generated QR values, History, or settings to the developer or to a developer-controlled server.</p>
 
     <h2>Information the extension handles</h2>
-    <p>Just QR Me handles only the information needed to scan or generate QR codes and provide its user-facing features:</p>
+    <p>Just QR Me handles only the information needed for its user-initiated QR features:</p>
     <ul>
-      <li><strong>Current-tab content:</strong> visible page screenshots, page images, and image source URLs when you explicitly start a Page or Snip scan.</li>
+      <li><strong>Current-tab content:</strong> visible page screenshots, selected regions, page images, and image source URLs when you explicitly start a Page or Snip scan.</li>
       <li><strong>Current link:</strong> the active tab URL only when you explicitly choose Link.</li>
       <li><strong>User-provided images:</strong> images you choose, drop, or paste into the extension.</li>
-      <li><strong>QR Studio fields:</strong> information you enter to create a website, plain text, phone, SMS, email, Wi-Fi, contact, or location QR code. Depending on the type you choose, this can include phone numbers, email addresses, message text, Wi-Fi credentials, names, contact details, website addresses, and geographic coordinates.</li>
-      <li><strong>Optional QR Studio logos:</strong> a PNG, JPG, or WebP image you select to place in the center of a generated QR code.</li>
-      <li><strong>Scanned and generated results:</strong> decoded or generated QR values, locally generated thumbnails, optional style information and logos, and timestamps.</li>
-      <li><strong>Preferences:</strong> selected font, font size, popup width, bold setting, high-contrast setting, and language choice.</li>
+      <li><strong>QR Studio fields:</strong> information you enter to create website, text, phone, SMS, email, Wi-Fi, contact, location, or social-platform QR codes. Depending on the QR type, this can include names, organizations, phone numbers, email addresses, message text, Wi-Fi network names and passwords, websites, social usernames or links, and geographic coordinates.</li>
+      <li><strong>QR Studio appearance:</strong> QR colors, corner-marker color, module shape, selected preset, logo size, and an optional image you select as a center logo. Social-platform logos included with the extension are applied locally.</li>
+      <li><strong>Scan and generated results:</strong> decoded or generated QR values, locally generated thumbnails, QR type and style information, and timestamps.</li>
+      <li><strong>Preferences:</strong> selected font, font size, popup width, bold, high contrast, color-safe mode, interface language, and print-unit preferences.</li>
     </ul>
 
     <h2>How information is used</h2>
-    <p>The extension uses this information only to find and decode QR codes; create and locally check static QR designs; add colors, module styles, and an optional center logo; copy results to your clipboard; open links you select; display recent History; export History items to CSV; download QR files as PNG or SVG; rebuild and print a QR from a result you select; and remember your interface preferences.</p>
+    <p>The extension uses this information only to find and decode QR codes; build and validate static QR codes; apply user-selected colors, shapes, and logos; copy results; open links you select; display and manage local History; export selected History items to CSV; create PNG or SVG downloads; rebuild and print QR sheets; and remember interface and accessibility preferences.</p>
+
+    <h2>QR Studio and sensitive content</h2>
+    <p>QR Studio processes its form fields in the extension page on your device. Its fields are not automatically added to History. A generated value, thumbnail, type, style, and optional logo are stored in local History only when you choose <strong>Save to History</strong>. Opening QR Studio, changing a field, previewing a design, or using local design feedback does not send the value or logo to the developer.</p>
+    <p>A static QR code can visibly encode information such as a phone number, message, contact record, Wi-Fi password, or location. Anyone who can scan a QR code you display, download, share, or print may be able to read that encoded information. Just QR Me does not encrypt the contents of a generated QR code. You control what information you enter and where the resulting QR code is shared.</p>
 
     <h2>Local processing and storage</h2>
-    <p>QR scanning, decoding, current-link QR generation, QR Studio generation and design checks, QR rebuilding, CSV export, and PNG or SVG creation occur inside the extension on your device. The Link action reads the active tab URL only after you choose Link and does not contact that website, the developer, or a third-party server to generate the QR.</p>
-    <p>QR Studio fields are processed on your device while you build a QR code. They are added to local History only when you choose <strong>Save to History</strong>. A selected logo stays on your device and is stored with the result only when you save that styled QR code to History. QR Studio does not upload fields, logos, or generated designs for validation or generation.</p>
+    <p>QR decoding, generation, styling, design validation, rebuilding, CSV export, and PNG or SVG creation occur inside the extension on your device. The Link action reads the active tab URL only after you choose Link and does not contact that website, the developer, or a third-party QR service to generate the QR.</p>
     <p>CSV, PNG, and SVG files are created only after you choose a download action. The extension passes the resulting file to Chrome's download system and does not upload it or retain an additional cloud copy.</p>
-    <p>Up to 50 recent decoded or generated results, thumbnails, and any styles or logos saved with those results are stored with <code>chrome.storage.local</code>. A selected result and its print or style information are passed temporarily to the extension's print page with <code>chrome.storage.session</code>. The extension does not use an account, cloud sync, analytics, telemetry, or a remote database.</p>
+    <p>Up to 50 recent decoded or generated results are stored with <code>chrome.storage.local</code>. A History item can contain its QR value, thumbnail, timestamp, QR type, style settings, and an optional embedded logo. Newer items replace the oldest items after the 50-item limit is reached. The popup, side panel, QR Studio, History export page, and print page use the same extension-local storage. The side panel does not create a separate copy or transmit this information.</p>
+    <p>When you choose Print, the selected QR value and style are temporarily passed to the extension's print page with <code>chrome.storage.session</code>. Session storage is not synchronized to a Google account and is cleared by Chrome when the extension or browser session ends. Old print jobs may also be removed when later print jobs are prepared.</p>
+    <p>The extension does not require an account and does not use cloud sync, analytics, telemetry, advertising trackers, or a remote database. The developer cannot access information stored only in your extension-local or session storage.</p>
     <p>When scanning an image tab or a full-resolution image already referenced by the current page, the extension may request that image directly from its existing source URL. The request goes to the website hosting that resource and is used only to complete the scan initiated by you. Scanned content and decoded results are not sent to the developer.</p>
 
     <h2>Sharing and selling</h2>
-    <p>Just QR Me does not sell user data. The extension does not share user data with advertisers, data brokers, analytics providers, or other third parties. User data is not used for advertising, creditworthiness, lending, or any purpose unrelated to the extension's QR features. Information voluntarily submitted through the separate support form is handled as described in the Contact section below.</p>
+    <p>Just QR Me does not sell user data. The extension does not share user data with advertisers, data brokers, analytics providers, or other third parties. User data is not used for personalized advertising, retargeting, creditworthiness, lending, or any purpose unrelated to the extension's disclosed QR features.</p>
+    <p>The limited exceptions are actions you request: retrieving an image from its existing source website for a scan, opening an external link, passing a file to Chrome's download system, or submitting information through the separate Google-hosted support form. These actions and their recipients are described in this policy. Just QR Me does not send the decoded or generated QR value to those parties merely to scan or build the QR code.</p>
 
     <h2>Clipboard access</h2>
-    <p>After a scan you initiate, the first decoded result is written to the system clipboard. You can also choose Copy from a result or History card. The extension handles an image from the clipboard only when you intentionally paste that image into the extension.</p>
+    <p>After a user-initiated Page, Snip, or Image scan succeeds, the extension copies the first decoded result to your clipboard. If several results are found, it prioritizes the first web link and otherwise uses the first result. You can also choose Copy on a result or History item. The extension reads an image from the clipboard only when you intentionally paste that image into the extension.</p>
 
     <h2>Deleting your data</h2>
-    <p>Select <strong>Clear</strong> in the History view to remove saved decoded and generated results, including styles and logos stored with them. Removing the extension also removes its extension-local storage from Chrome. Files you intentionally downloaded remain in your chosen download location until you delete them.</p>
+    <p>You can delete an individual History item with its Delete control. Undo is available temporarily while the History view remains open. Select <strong>Clear</strong> to remove all saved decoded and generated History items, including stored thumbnails, styles, and logos. Removing the extension also removes its extension-local storage from Chrome. Files you intentionally downloaded remain in your chosen download location until you delete them.</p>
+
+    <h2>Chrome permissions</h2>
+    <ul>
+      <li><strong>activeTab:</strong> provides temporary access to the current tab after you invoke the extension so Page and Snip can process visible content and Link can read the current URL.</li>
+      <li><strong>scripting:</strong> runs the user-initiated Snip selector and reads limited page-image information needed for local Page scanning. It does not run persistently on websites.</li>
+      <li><strong>clipboardWrite:</strong> writes a decoded or generated result to the clipboard as described above.</li>
+      <li><strong>storage:</strong> stores local History, interface preferences, and temporary print jobs.</li>
+      <li><strong>favicon:</strong> displays Chrome-provided website icons beside HTTP or HTTPS results.</li>
+      <li><strong>sidePanel:</strong> displays the same local extension interface beside the current page. This permission does not itself grant access to website content.</li>
+    </ul>
+    <p>The extension does not request access to every website or run a persistent content script. Page and Snip cannot run on browser-internal pages where Chrome blocks extension access.</p>
 
     <h2>External links</h2>
-    <p>The extension can open a decoded or locally generated link at your request. It also includes an optional Buy Me a Coffee link. Once you open an external website, that website's privacy policy and practices apply. Just QR Me does not receive payment or financial information from Buy Me a Coffee.</p>
+    <p>The extension can open a decoded or locally generated link at your request. Social QR presets construct supported platform links locally and do not contact those platforms while you edit or preview the QR. A platform receives information under its own privacy practices only when the resulting link is opened, whether directly from the extension or after the QR code is scanned.</p>
+    <p>The extension also includes an optional Buy Me a Coffee link. Once you open an external website, that website's privacy policy and practices apply. Just QR Me does not receive payment-card or other financial information from Buy Me a Coffee.</p>
 
     <h2>Chrome Web Store Limited Use</h2>
-    <p>Just QR Me's use of information obtained through Chrome permissions complies with the Chrome Web Store User Data Policy, including the Limited Use requirements. Information is used only to provide or improve the extension's single-purpose, user-facing QR scanning, QR creation and styling, History, export, download, and printing features.</p>
+    <p>Just QR Me's use of information obtained through Chrome permissions complies with the Chrome Web Store User Data Policy, including the Limited Use requirements. Information is used only to provide or improve the extension's single-purpose, user-facing QR scanning, generation, styling, History, export, download, and printing features. This restriction applies to raw data and to data derived from it.</p>
+
+    <h2>Children's privacy</h2>
+    <p>Just QR Me is a general-purpose utility and is not directed to children. The extension does not knowingly collect information from children or operate a developer-controlled service that creates child accounts.</p>
 
     <h2>Changes to this policy</h2>
-    <p>If the extension's data practices change, this policy and the Chrome Web Store disclosures will be updated before the new practices are introduced.</p>
+    <p>If the extension's data practices materially change, this policy, the Chrome Web Store disclosures, and any required in-product notice will be updated before the new practices are introduced. The effective date above identifies the current version of this policy.</p>
 
     <h2>Contact</h2>
     <p>Questions, bug reports, and feedback can be submitted through the Just QR Me Support form:</p>
     <p><a class="contact-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeJ15zHnuvfHqbMSW88E9lgsPGvoaSfUGJp_aLOERW1BOtCUw/viewform?usp=publish-editor">Submit a support question</a></p>
-    <p>You may submit the form without providing your name or email address. If you voluntarily provide an email address, it will be used only to reply to your submission. It will not be used for marketing or shared with advertisers or data brokers.</p>
-    <p>The support form is hosted by Google Forms. Information submitted through the form is delivered to the developer and is also processed by Google under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. Support submissions are retained only as reasonably needed to respond to and manage support requests. Please do not include sensitive personal information.</p>
+    <p>The support form is separate from the extension. No extension History, QR value, QR Studio field, logo, setting, or browsing information is attached automatically. You may submit the form without providing your name or email address. If you voluntarily provide an email address, it will be used only to reply to your submission. It will not be used for marketing or shared with advertisers or data brokers.</p>
+    <p>The support form is hosted by Google Forms. Information you choose to submit is delivered to the developer and is also processed by Google under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. Support submissions are retained only as reasonably needed to respond to and manage support requests. Please do not include passwords, financial information, health information, or other sensitive personal information.</p>
 
     <footer>
       <a href="https://github.com/theverycob">Developer on GitHub</a>
